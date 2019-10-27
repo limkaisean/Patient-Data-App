@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Patient Data</title>
+  <link rel="stylesheet" href="css/styles.css" type="text/css" />
+</head>
+<body>
+<h2 class="header">Patient Data App</h2>
+<ul class="menu">
+  <li>
+    <a href="patientList.html">View the Patient Name List</a>
+  </li>
+  <li>
+    <a href="search.html">Search</a>
+  </li>
+  <li>
+    <a href="analytics.html">Basic Analytics</a>
+  </li>
+</ul>
+<form action="upload" method="POST" enctype="multipart/form-data">
+  <input type="file" name="file" accept=".csv"/>
+  <input type="submit" />
+</form>
+<p>To make sure the file uploads properly, please ensure that the .csv file is in the project folder.</p>
+</body>
+</html>

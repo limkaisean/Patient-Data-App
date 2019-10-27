@@ -1,0 +1,64 @@
+
+<html>
+<head>
+  <title>Patient Data App</title>
+  <link rel="stylesheet" href="css/styles.css" type="text/css" />
+</head>
+<body>
+<div class="main">
+  <h2 class="header">Patient Data App</h2>
+  <h3>Search</h3>
+  <form method="GET" action="runsearch.html">
+    <input type="text" autocomplete="off" name="searchstring" placeholder="Enter search keyword here"  id="searchbar"/>
+    <input type="submit" value="Search"/>
+    <select name="searchOption">
+      <option value="name" selected class="choice">Name</option>
+      <option value="id" class="choice">ID</option>
+      <option value="birthdate" class="choice">Birthdate</option>
+      <option value="deathdate" class="choice">Deathdate</option>
+      <option value="ssn" class="choice">SSN</option>
+      <option value="drivers" class="choice">Drivers</option>
+      <option value="passport" class="choice">Passport</option>
+      <option value="prefix" class="choice">Prefix</option>
+      <option value="suffix" class="choice">Suffix</option>
+      <option value="maiden" class="choice">Maiden</option>
+      <option value="marital" class="choice">Marital</option>
+      <option value="race" class="choice">Race</option>
+      <option value="ethnicity" class="choice">Ethnicity</option>
+      <option value="birthplace" class="choice">Birthplace</option>
+      <option value="address" class="choice">Address</option>
+      <option value="city" class="choice">City</option>
+      <option value="state" class="choice">State</option>
+      <option value="zip" class="choice">ZIP</option>
+    </select>
+    <select name="gender">
+      <option value="both" selected class="choice">Both</option>
+      <option value="M" class="choice">Male</option>
+      <option value="F" class="choice">Female</option>
+    </select>
+    <div class="slidecontainer">
+      <input type="range" min="1" max="120" class="slider" value="1" id="minAge" name="minAge">
+      <br>
+      <input type="range" min="1" max="120" class="slider" value="120" id="maxAge" name="maxAge">
+      <p>Age Range: <span id="ageLowerBound"></span> to <span id="ageUpperBound"></span></p>
+    </div>
+    <script>
+        var slider1 = document.getElementById("minAge");
+        var slider2 = document.getElementById("maxAge");
+        var output1 = document.getElementById("ageLowerBound");
+        var output2 = document.getElementById("ageUpperBound");
+        output1.innerHTML = slider1.value;
+        output2.innerHTML = slider2.value;
+
+
+        slider1.oninput = function() {
+            output1.innerHTML = this.value;
+        }
+        slider2.oninput = function() {
+            output2.innerHTML = this.value;
+        }
+    </script>
+  </form>
+</div>
+</body>
+</html>
